@@ -29,6 +29,8 @@ import { InteractiveCard } from '@/components/interactive-card';
 import { ThreatIcon3D } from '@/components/threat-icon-3d';
 import QDayCountdown from '@/components/qday-countdown';
 import { cn } from '@/lib/utils';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Terminal } from 'lucide-react';
 
 const industries = [
   {
@@ -207,7 +209,7 @@ export default function Home() {
       {/* Quantum Threat Dashboard Section */}
       <section
         id="q-day"
-        className="items-center bg-background overflow-hidden py-24 text-center"
+        className="items-center bg-background overflow-hidden pt-16 pb-24 text-center"
       >
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl section-header">
@@ -289,7 +291,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {industries.map((industry) => (
               <InteractiveCard key={industry.title}>
-                <Card className="h-full min-h-[280px] border-border bg-background text-left transition-all duration-300 flex flex-col justify-center">
+                <Card className="h-full min-h-[280px] border-border bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float">
                   <CardHeader>
                     <industry.icon className="mb-4 h-8 w-8 text-foreground" />
                     <CardTitle>{industry.title}</CardTitle>
@@ -387,12 +389,13 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Desktop Matrix */}
           <motion.div
             variants={matrixContainerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-[1fr,repeat(4,auto)] rounded-lg border bg-secondary/30"
+            className="hidden lg:grid grid-cols-[1fr,repeat(4,auto)] rounded-lg border bg-secondary/30"
           >
             {/* Header Row */}
             <div className="p-4 text-left font-semibold text-foreground sm:pl-6">Threat Vector</div>
@@ -437,6 +440,40 @@ export default function Home() {
               </div>
             ))}
           </motion.div>
+
+          {/* Mobile/Tablet Card List */}
+          <div className="grid grid-cols-1 gap-6 lg:hidden md:grid-cols-2">
+              {mitigationData.map((item, index) => (
+                  <InteractiveCard key={index}>
+                      <Card className="h-full bg-secondary/30 animate-float">
+                          <CardHeader>
+                              <CardTitle>{item.threat}</CardTitle>
+                              <p className="pt-2 text-sm text-muted-foreground">{item.description}</p>
+                          </CardHeader>
+                          <CardContent>
+                              <h4 className="font-semibold text-foreground mb-3">Mitigated By:</h4>
+                              <div className="flex flex-wrap gap-x-6 gap-y-3">
+                                  {matrixProducts.map(product => (
+                                      <div
+                                          key={product.id}
+                                          className={cn(
+                                              "flex items-center gap-2 text-sm",
+                                              item.mitigation[product.id as keyof typeof item.mitigation]
+                                                  ? "text-primary"
+                                                  : "text-muted-foreground opacity-60 line-through"
+                                          )}
+                                      >
+                                          <ShieldCheck className={cn("h-5 w-5", item.mitigation[product.id as keyof typeof item.mitigation] ? 'text-primary' : 'text-muted-foreground')} />
+                                          <span>{product.name}</span>
+                                      </div>
+                                  ))}
+                              </div>
+                          </CardContent>
+                      </Card>
+                  </InteractiveCard>
+              ))}
+          </div>
+
         </div>
       </section>
       
@@ -468,3 +505,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
