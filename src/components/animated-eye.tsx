@@ -10,11 +10,11 @@ export function AnimatedEye() {
     <motion.div
       className="relative h-8 w-8"
       animate={{
-        x: [0, 6, -4, 5, -7, 0],
-        y: [0, -5, 6, -4, 5, 0],
+        x: [-8, 8],
+        y: 0,
       }}
       transition={{
-        duration: 8,
+        duration: 4,
         repeat: Infinity,
         ease: 'easeInOut',
         repeatType: 'mirror',
