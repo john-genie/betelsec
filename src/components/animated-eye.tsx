@@ -11,7 +11,6 @@ export function AnimatedEye() {
       className="relative h-8 w-8"
       animate={{
         x: [-8, 8],
-        y: 0,
       }}
       transition={{
         duration: 4,
