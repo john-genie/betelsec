@@ -14,39 +14,39 @@ export function AnimatedEye() {
         strokeLinejoin="round"
         className="h-full w-full text-primary"
       >
-        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-        <motion.circle
-          cx="12"
-          cy="12"
-          r="3"
-          fill="currentColor"
-          animate={{
-            x: [-2, 2, -2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            repeatType: 'mirror',
-          }}
-        />
-        {/* A simple blinking effect by scaling a line */}
-        <motion.path
-          d="M2 12 L 22 12"
-          strokeWidth="2.5"
-          stroke="hsl(var(--primary))"
-          initial={{ scaleY: 0 }}
-          animate={{
-            scaleY: [0, 1, 0, 0],
-          }}
+        {/* Blinking animation applied to the whole eye group */}
+        <motion.g
+          style={{ transformOrigin: 'center' }}
+          animate={{ scaleY: [1, 1, 0.1, 1, 1] }}
           transition={{
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',
-            times: [0, 0.05, 0.1, 1],
+            times: [0, 0.8, 0.85, 0.9, 1], // Blink happens quickly towards the end of the duration
           }}
-          style={{ transformOrigin: 'center' }}
-        />
+        >
+          {/* Eye outline */}
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+          
+          {/* Pupil with looking around animation */}
+          <motion.circle
+            cx="12"
+            cy="12"
+            r="3"
+            fill="currentColor"
+            strokeWidth="0"
+            animate={{
+              x: [0, 3, -2, 2, -3, 0], // More dynamic path
+              y: [-1, 2, -2, 2, 1, -1],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'linear',
+              repeatType: 'loop',
+            }}
+          />
+        </motion.g>
       </svg>
     </div>
   );
