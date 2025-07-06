@@ -17,18 +17,18 @@ export function AnimatedEye() {
         {/* Blinking animation applied to the whole eye group */}
         <motion.g
           style={{ transformOrigin: 'center' }}
-          animate={{ scaleY: [1, 1, 0.1, 1, 1] }}
+          animate={{ scaleY: [1, 1, 0.1, 1] }}
           transition={{
-            duration: 5,
+            duration: 4, // A slightly faster cycle
             repeat: Infinity,
             ease: 'easeInOut',
-            times: [0, 0.8, 0.85, 0.9, 1], // Blink happens quickly towards the end of the duration
+            times: [0, 0.9, 0.95, 1], // Blink is quicker
           }}
         >
           {/* Eye outline */}
           <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
           
-          {/* Pupil with looking around animation */}
+          {/* Pupil with more expressive looking around animation */}
           <motion.circle
             cx="12"
             cy="12"
@@ -36,13 +36,14 @@ export function AnimatedEye() {
             fill="currentColor"
             strokeWidth="0"
             animate={{
-              x: [0, 3, -2, 2, -3, 0], // More dynamic path
-              y: [-1, 2, -2, 2, 1, -1],
+              // More expansive and varied movement to show it's "looking everywhere"
+              x: [0, 4, -3, 0, 2, -4, 0], 
+              y: [0, 2, 3, -2, -3, 1, 0],
             }}
             transition={{
-              duration: 4,
+              duration: 3.5, // Faster scanning
               repeat: Infinity,
-              ease: 'linear',
+              ease: 'easeInOut',
               repeatType: 'loop',
             }}
           />
