@@ -12,9 +12,6 @@ import {
 import { Footer } from '@/components/layout/footer';
 import {
   ArrowRight,
-  Shield,
-  Eye,
-  Crosshair,
   Landmark,
   DollarSign,
   Network,
@@ -29,8 +26,9 @@ import { InteractiveCard } from '@/components/interactive-card';
 import { ThreatIcon3D } from '@/components/threat-icon-3d';
 import QDayCountdown from '@/components/qday-countdown';
 import { cn } from '@/lib/utils';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Terminal } from 'lucide-react';
+import { AnimatedEye } from '@/components/animated-eye';
+import { AnimatedCrosshair } from '@/components/animated-crosshair';
+import { AnimatedShield } from '@/components/animated-shield';
 
 const industries = [
   {
@@ -73,19 +71,19 @@ const industries = [
 
 const pillars = [
   {
-    icon: Eye,
+    icon: AnimatedEye,
     title: 'Anticipate',
     description:
       'Proactive intelligence to identify and map emerging threats before they materialize. We provide clarity in the noise.',
   },
   {
-    icon: Crosshair,
+    icon: AnimatedCrosshair,
     title: 'Neutralize',
     description:
       'Active defense strategies and countermeasures to disrupt and dismantle adversarial campaigns in real-time.',
   },
   {
-    icon: Shield,
+    icon: AnimatedShield,
     title: 'Fortify',
     description:
       'Building long-term resilience through quantum-resistant architecture and continuous security posture enhancement.',
@@ -209,7 +207,7 @@ export default function Home() {
       {/* Quantum Threat Dashboard Section */}
       <section
         id="q-day"
-        className="items-center bg-background overflow-hidden pt-16 pb-24 text-center"
+        className="items-center bg-background overflow-hidden pb-24 text-center"
       >
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl section-header">
@@ -505,5 +503,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

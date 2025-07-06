@@ -1,13 +1,12 @@
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import type { LucideIcon } from 'lucide-react';
 import React from 'react';
 import { InteractiveCard } from './interactive-card';
 
 type StrategicPillarCardProps = {
   pillar: {
-    icon: LucideIcon;
+    icon: React.ElementType;
     title: string;
     description: string;
   };
@@ -27,7 +26,7 @@ export function StrategicPillarCard({ pillar }: StrategicPillarCardProps) {
             className="bg-primary/10 text-primary mb-4 inline-block rounded-md p-3"
             style={{ transform: 'translateZ(50px)' }}
           >
-            <Icon className="h-8 w-8" />
+            <Icon />
           </div>
           <CardTitle style={{ transform: 'translateZ(30px)' }}>
             {title}
