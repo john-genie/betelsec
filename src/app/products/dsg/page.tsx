@@ -87,12 +87,23 @@ export default function DsgPage() {
               return (
                 <div key={feature.title}>
                   <InteractiveCard className="h-full">
-                    <div className="h-full rounded-lg border bg-secondary/50 p-6 text-left">
-                      <Icon className="h-10 w-10 text-foreground mb-4" />
-                      <h3 className="text-xl font-semibold text-foreground">
+                    <div
+                      className="h-full rounded-lg border bg-secondary/50 p-6 text-left"
+                      style={{ transformStyle: 'preserve-3d' }}
+                    >
+                      <div style={{ transform: 'translateZ(50px)' }}>
+                        <Icon className="h-10 w-10 text-foreground mb-4" />
+                      </div>
+                      <h3
+                        className="text-xl font-semibold text-foreground"
+                        style={{ transform: 'translateZ(40px)' }}
+                      >
                         {feature.title}
                       </h3>
-                      <p className="mt-2 text-muted-foreground">
+                      <p
+                        className="mt-2 text-muted-foreground"
+                        style={{ transform: 'translateZ(20px)' }}
+                      >
                         {feature.description}
                       </p>
                     </div>

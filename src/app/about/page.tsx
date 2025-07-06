@@ -51,10 +51,23 @@ export default function AboutPage() {
           <div className="mt-12 grid grid-cols-1 gap-12 sm:grid-cols-3">
             <div>
               <InteractiveCard>
-                <div className="h-full rounded-lg border bg-secondary/50 p-8 text-center">
-                  <CheckCircle className="mx-auto h-10 w-10 text-foreground" />
-                  <h3 className="mt-4 text-xl font-semibold">Innovation</h3>
-                  <p className="mt-2 text-muted-foreground">
+                <div
+                  className="h-full rounded-lg border bg-secondary/50 p-8 text-center"
+                  style={{ transformStyle: 'preserve-3d' }}
+                >
+                  <div style={{ transform: 'translateZ(50px)' }}>
+                    <CheckCircle className="mx-auto h-10 w-10 text-foreground" />
+                  </div>
+                  <h3
+                    className="mt-4 text-xl font-semibold"
+                    style={{ transform: 'translateZ(40px)' }}
+                  >
+                    Innovation
+                  </h3>
+                  <p
+                    className="mt-2 text-muted-foreground"
+                    style={{ transform: 'translateZ(20px)' }}
+                  >
                     We are relentless in our pursuit of cutting-edge technology
                     to stay ahead of emerging threats.
                   </p>
@@ -63,10 +76,23 @@ export default function AboutPage() {
             </div>
             <div>
               <InteractiveCard>
-                <div className="h-full rounded-lg border bg-secondary/50 p-8 text-center">
-                  <CheckCircle className="mx-auto h-10 w-10 text-foreground" />
-                  <h3 className="mt-4 text-xl font-semibold">Integrity</h3>
-                  <p className="mt-2 text-muted-foreground">
+                <div
+                  className="h-full rounded-lg border bg-secondary/50 p-8 text-center"
+                  style={{ transformStyle: 'preserve-3d' }}
+                >
+                  <div style={{ transform: 'translateZ(50px)' }}>
+                    <CheckCircle className="mx-auto h-10 w-10 text-foreground" />
+                  </div>
+                  <h3
+                    className="mt-4 text-xl font-semibold"
+                    style={{ transform: 'translateZ(40px)' }}
+                  >
+                    Integrity
+                  </h3>
+                  <p
+                    className="mt-2 text-muted-foreground"
+                    style={{ transform: 'translateZ(20px)' }}
+                  >
                     We operate with unwavering ethical standards, building trust
                     through transparency and reliability.
                   </p>
@@ -75,10 +101,23 @@ export default function AboutPage() {
             </div>
             <div>
               <InteractiveCard>
-                <div className="h-full rounded-lg border bg-secondary/50 p-8 text-center">
-                  <CheckCircle className="mx-auto h-10 w-10 text-foreground" />
-                  <h3 className="mt-4 text-xl font-semibold">Resilience</h3>
-                  <p className="mt-2 text-muted-foreground">
+                <div
+                  className="h-full rounded-lg border bg-secondary/50 p-8 text-center"
+                  style={{ transformStyle: 'preserve-3d' }}
+                >
+                  <div style={{ transform: 'translateZ(50px)' }}>
+                    <CheckCircle className="mx-auto h-10 w-10 text-foreground" />
+                  </div>
+                  <h3
+                    className="mt-4 text-xl font-semibold"
+                    style={{ transform: 'translateZ(40px)' }}
+                  >
+                    Resilience
+                  </h3>
+                  <p
+                    className="mt-2 text-muted-foreground"
+                    style={{ transform: 'translateZ(20px)' }}
+                  >
                     We design robust solutions that ensure our clients' security
                     and operational continuity.
                   </p>

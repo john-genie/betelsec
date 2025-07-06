@@ -289,13 +289,23 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {industries.map((industry) => (
               <InteractiveCard key={industry.title}>
-                <Card className="h-full min-h-[280px] bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float animate-pulse-border">
+                <Card
+                  className="h-full min-h-[280px] bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float animate-pulse-border"
+                  style={{ transformStyle: 'preserve-3d' }}
+                >
                   <CardHeader>
-                    <industry.icon className="mb-4 h-8 w-8 text-foreground" />
-                    <CardTitle>{industry.title}</CardTitle>
+                    <div style={{ transform: 'translateZ(50px)' }}>
+                      <industry.icon className="mb-4 h-8 w-8 text-foreground" />
+                    </div>
+                    <CardTitle style={{ transform: 'translateZ(40px)' }}>
+                      {industry.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">
+                    <p
+                      className="text-muted-foreground"
+                      style={{ transform: 'translateZ(20px)' }}
+                    >
                       {industry.description}
                     </p>
                   </CardContent>
@@ -443,14 +453,17 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-6 lg:hidden md:grid-cols-2">
               {mitigationData.map((item, index) => (
                   <InteractiveCard key={index}>
-                      <Card className="h-full bg-secondary/30 animate-float">
+                      <Card
+                        className="h-full bg-secondary/30 animate-float"
+                        style={{ transformStyle: 'preserve-3d' }}
+                      >
                           <CardHeader>
-                              <CardTitle>{item.threat}</CardTitle>
-                              <p className="pt-2 text-sm text-muted-foreground">{item.description}</p>
+                              <CardTitle style={{ transform: 'translateZ(40px)' }}>{item.threat}</CardTitle>
+                              <p className="pt-2 text-sm text-muted-foreground" style={{ transform: 'translateZ(30px)' }}>{item.description}</p>
                           </CardHeader>
                           <CardContent>
-                              <h4 className="font-semibold text-foreground mb-3">Mitigated By:</h4>
-                              <div className="flex flex-wrap gap-x-6 gap-y-3">
+                              <h4 className="font-semibold text-foreground mb-3" style={{ transform: 'translateZ(20px)' }}>Mitigated By:</h4>
+                              <div className="flex flex-wrap gap-x-6 gap-y-3" style={{ transform: 'translateZ(20px)' }}>
                                   {matrixProducts.map(product => (
                                       <div
                                           key={product.id}
