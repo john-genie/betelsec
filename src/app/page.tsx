@@ -207,7 +207,7 @@ export default function Home() {
       {/* Quantum Threat Dashboard Section */}
       <section
         id="q-day"
-        className="items-center bg-background overflow-hidden pb-24 text-center"
+        className="items-center bg-background overflow-hidden pb-12 text-center"
       >
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl section-header">
@@ -289,7 +289,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {industries.map((industry) => (
               <InteractiveCard key={industry.title}>
-                <Card className="h-full min-h-[280px] border-border bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float">
+                <Card className="h-full min-h-[280px] border-primary/20 bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float">
                   <CardHeader>
                     <industry.icon className="mb-4 h-8 w-8 text-foreground" />
                     <CardTitle>{industry.title}</CardTitle>
