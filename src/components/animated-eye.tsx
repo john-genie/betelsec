@@ -7,7 +7,19 @@ export function AnimatedEye() {
   const closedPath = "M2 12s3-1 10-1 10 1 10 1-3 1-10 1-10-1-10-1Z";
 
   return (
-    <div className="relative h-8 w-8">
+    <motion.div
+      className="relative h-8 w-8"
+      animate={{
+        x: [0, 6, -4, 5, -7, 0],
+        y: [0, -5, 6, -4, 5, 0],
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        ease: 'easeInOut',
+        repeatType: 'mirror',
+      }}
+    >
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -57,6 +69,6 @@ export function AnimatedEye() {
             />
         </motion.g>
       </svg>
-    </div>
+    </motion.div>
   );
 }
