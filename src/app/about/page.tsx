@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Terminal } from 'lucide-react';
 import { InteractiveCard } from '@/components/interactive-card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,13 @@ export default function AboutPage() {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
             Pioneering the future of digital security in the quantum era.
           </p>
+          <Alert className="mt-8 max-w-3xl mx-auto text-left">
+            <Terminal className="h-4 w-4" />
+            <AlertTitle>Under Construction</AlertTitle>
+            <AlertDescription>
+              This page is currently being updated. Thank you for visiting!
+            </AlertDescription>
+          </Alert>
         </header>
       </section>
 
