@@ -60,7 +60,7 @@ export default function AboutPage() {
             <div>
               <InteractiveCard>
                 <div
-                  className="h-full rounded-lg border bg-secondary/50 p-8 text-center"
+                  className="h-full rounded-lg border border-primary bg-secondary/50 p-8 text-center"
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   <div style={{ transform: 'translateZ(50px)' }}>
@@ -85,7 +85,7 @@ export default function AboutPage() {
             <div>
               <InteractiveCard>
                 <div
-                  className="h-full rounded-lg border bg-secondary/50 p-8 text-center"
+                  className="h-full rounded-lg border border-primary bg-secondary/50 p-8 text-center"
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   <div style={{ transform: 'translateZ(50px)' }}>
@@ -110,7 +110,7 @@ export default function AboutPage() {
             <div>
               <InteractiveCard>
                 <div
-                  className="h-full rounded-lg border bg-secondary/50 p-8 text-center"
+                  className="h-full rounded-lg border border-primary bg-secondary/50 p-8 text-center"
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   <div style={{ transform: 'translateZ(50px)' }}>

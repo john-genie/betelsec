@@ -99,7 +99,7 @@ Hyderabad, Telangana 500084
           </div>
           <div>
             <InteractiveCard className="h-full">
-              <div className="h-full rounded-lg bg-background p-8 shadow-sm border">
+              <div className="h-full rounded-lg bg-background p-8 shadow-sm border border-primary">
                 <ContactForm />
               </div>
             </InteractiveCard>

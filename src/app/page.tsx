@@ -290,7 +290,7 @@ export default function Home() {
             {industries.map((industry) => (
               <InteractiveCard key={industry.title}>
                 <Card
-                  className="h-full min-h-[280px] bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float border-primary/30"
+                  className="h-full min-h-[280px] bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float border border-primary"
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   <CardHeader>
@@ -403,7 +403,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="hidden lg:grid grid-cols-[1fr,repeat(4,auto)] rounded-lg border bg-secondary/30"
+            className="hidden lg:grid grid-cols-[1fr,repeat(4,auto)] rounded-lg border border-primary bg-secondary/30"
           >
             {/* Header Row */}
             <div className="p-4 text-left font-semibold text-foreground sm:pl-6">Threat Vector</div>
@@ -454,7 +454,7 @@ export default function Home() {
               {mitigationData.map((item, index) => (
                   <InteractiveCard key={index}>
                       <Card
-                        className="h-full bg-secondary/30 animate-float"
+                        className="h-full bg-secondary/30 animate-float border border-primary"
                         style={{ transformStyle: 'preserve-3d' }}
                       >
                           <CardHeader>

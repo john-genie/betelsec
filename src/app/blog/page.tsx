@@ -94,7 +94,7 @@ export default function BlogPage() {
               >
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col rounded-lg border bg-secondary/30 p-6 transition-all duration-300 hover:bg-secondary/60 hover:shadow-[0_0_25px_hsl(var(--primary)/0.2)]"
+                  className="group flex h-full flex-col rounded-lg border border-primary bg-secondary/30 p-6 transition-all duration-300 hover:bg-secondary/60 hover:shadow-[0_0_25px_hsl(var(--primary)/0.2)]"
                 >
                   <h3 className="text-xl font-bold tracking-tight text-foreground">
                     {post.title}

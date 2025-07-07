@@ -88,7 +88,7 @@ export default function SynapsePage() {
                 <div key={feature.title}>
                   <InteractiveCard className="h-full">
                     <div
-                      className="h-full rounded-lg border bg-secondary/50 p-6 text-left"
+                      className="h-full rounded-lg border border-primary bg-secondary/50 p-6 text-left"
                       style={{ transformStyle: 'preserve-3d' }}
                     >
                       <div style={{ transform: 'translateZ(50px)' }}>
