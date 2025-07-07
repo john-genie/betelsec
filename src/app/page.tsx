@@ -290,7 +290,7 @@ export default function Home() {
             {industries.map((industry) => (
               <InteractiveCard key={industry.title}>
                 <Card
-                  className="h-full min-h-[280px] bg-background text-left transition-all duration-300 flex flex-col justify-center animate-float border border-primary"
+                  className="h-full min-h-[280px] bg-background text-left transition-all duration-300 flex flex-col justify-center border border-primary"
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   <CardHeader>
