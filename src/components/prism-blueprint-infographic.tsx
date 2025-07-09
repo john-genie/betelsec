@@ -111,17 +111,11 @@ export const PrismBlueprintInfographic = () => {
             </div>
 
             {/* Row 3: Nodes Reversed */}
-            <div className="col-start-1 col-end-6 row-start-3 row-end-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-x-4">
+            <div className="col-start-3 col-end-6 row-start-3 row-end-4 grid grid-cols-[1fr_auto_1fr] items-start gap-x-4">
                 <FlowNode 
                     icon={ShieldCheck}
                     title="Secured Asset"
                     description="Data is now quantum-proof and ready for its intended use."
-                />
-                <FlowArrow />
-                <FlowNode 
-                    icon={File}
-                    title="Data In-Use"
-                    description="Protects data while being actively processed in memory."
                 />
                 <FlowArrow />
                 <FlowNode 
@@ -130,7 +124,6 @@ export const PrismBlueprintInfographic = () => {
                     description="Ensures long-term security for data in storage and archives."
                 />
             </div>
-
         </motion.div>
 
         {/* Mobile layout */}
@@ -163,12 +156,6 @@ export const PrismBlueprintInfographic = () => {
                 icon={Database}
                 title="Data At-Rest"
                 description="Ensures long-term security for data in storage and archives."
-            />
-            <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
-             <FlowNode 
-                icon={File}
-                title="Data In-Use"
-                description="Protects data while being actively processed in memory."
             />
             <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
              <FlowNode 
