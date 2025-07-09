@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Cpu, FileText, BarChart3 } from 'lucide-react';
+import { ArrowRight, Cpu, FileText, BarChart3, CheckCircle } from 'lucide-react';
 import { PrismBlueprintInfographic } from '@/components/prism-blueprint-infographic';
 
 export default function ProductAnalysisPage() {
@@ -68,15 +68,24 @@ export default function ProductAnalysisPage() {
             <p>
               PRISM's innovation is anchored in several patentable technologies that create a strong competitive moat. These include:
             </p>
-            <ul className="list-disc list-inside space-y-4">
-                <li>
-                    <strong>AI-Powered Threat Classification Engine:</strong> A proprietary machine learning model within PRISM that analyzes encrypted traffic patterns to identify and mitigate threats without decryption, specializing in Data Loss Prevention (DLP) for the quantum era.
+            <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1 text-destructive" />
+                    <div>
+                        <strong className="font-semibold text-foreground">AI-Powered Threat Classification Engine:</strong> A proprietary machine learning model within PRISM that analyzes encrypted traffic patterns to identify and mitigate threats without decryption, specializing in Data Loss Prevention (DLP) for the quantum era.
+                    </div>
                 </li>
-                 <li>
-                    <strong>Dynamic Crypto-Agility Framework:</strong> A system integrated into PRISM that allows for the seamless and automated rotation of cryptographic algorithms, ensuring long-term resilience against future vulnerabilities.
+                 <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1 text-destructive" />
+                    <div>
+                        <strong className="font-semibold text-foreground">Dynamic Crypto-Agility Framework:</strong> A system integrated into PRISM that allows for the seamless and automated rotation of cryptographic algorithms, ensuring long-term resilience against future vulnerabilities.
+                    </div>
                 </li>
-                 <li>
-                    <strong>Hybrid PQC Encryption Model:</strong> The core architecture of PRISM combines classical and multiple post-quantum algorithms in a hybrid model, providing layered defense against both current and future computational threats.
+                 <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 flex-shrink-0 mt-1 text-destructive" />
+                    <div>
+                        <strong className="font-semibold text-foreground">Hybrid PQC Encryption Model:</strong> The core architecture of PRISM combines classical and multiple post-quantum algorithms in a hybrid model, providing layered defense against both current and future computational threats.
+                    </div>
                 </li>
             </ul>
           </div>

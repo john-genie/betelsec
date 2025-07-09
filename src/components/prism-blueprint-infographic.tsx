@@ -68,7 +68,6 @@ const FlowArrow = () => (
                 strokeLinecap="round" 
                 fill="none"
                 variants={arrowVariants}
-                custom={1.2}
             />
         </svg>
     </motion.div>
@@ -83,7 +82,7 @@ export const PrismBlueprintInfographic = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-y-8 gap-x-4"
+            className="hidden md:grid md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-y-8 gap-x-4"
         >
             {/* Row 1: Nodes */}
             <FlowNode 
@@ -105,84 +104,73 @@ export const PrismBlueprintInfographic = () => {
             />
 
             {/* Row 2: Arrow Down */}
-             <div className="hidden md:flex md:col-start-5 md:col-end-6 row-start-2 row-end-3 justify-center items-center h-20">
+             <div className="col-start-5 col-end-6 row-start-2 row-end-3 flex justify-center items-center h-20">
                 <motion.div variants={itemVariants}>
                     <ArrowRight className="h-10 w-10 text-primary/50 rotate-90" />
                 </motion.div>
             </div>
 
             {/* Row 3: Nodes Reversed */}
-             <FlowNode 
-                icon={ShieldCheck}
-                title="Secured Asset"
-                description="Data is now quantum-proof and ready for its intended use."
-            />
-            <FlowArrow />
-            <FlowNode 
-                icon={File}
-                title="Data In-Use"
-                description="Protects data while being actively processed in memory."
-            />
-             <FlowArrow />
-             <FlowNode 
-                icon={Database}
-                title="Data At-Rest"
-                description="Ensures long-term security for data in storage and archives."
-            />
+            <div className="col-start-1 col-end-6 row-start-3 row-end-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-x-4">
+                <FlowNode 
+                    icon={ShieldCheck}
+                    title="Secured Asset"
+                    description="Data is now quantum-proof and ready for its intended use."
+                />
+                <FlowArrow />
+                <FlowNode 
+                    icon={File}
+                    title="Data In-Use"
+                    description="Protects data while being actively processed in memory."
+                />
+                <FlowArrow />
+                <FlowNode 
+                    icon={Database}
+                    title="Data At-Rest"
+                    description="Ensures long-term security for data in storage and archives."
+                />
+            </div>
 
-             {/* Mobile layout arrows */}
-            <div className="flex md:hidden justify-center items-center w-full my-4">
-                 <ArrowRight className="h-10 w-10 text-primary/50 rotate-90" />
-            </div>
-             <div className="flex md:hidden justify-center items-center w-full my-4">
-                 <ArrowRight className="h-10 w-10 text-primary/50 rotate-90" />
-            </div>
-             <div className="flex md:hidden justify-center items-center w-full my-4">
-                 <ArrowRight className="h-10 w-10 text-primary/50 rotate-90" />
-            </div>
-              <div className="flex md:hidden justify-center items-center w-full my-4">
-                 <ArrowRight className="h-10 w-10 text-primary/50 rotate-90" />
-            </div>
         </motion.div>
 
-        {/* Re-ordering for mobile view */}
+        {/* Mobile layout */}
         <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col md:hidden items-center gap-y-4 mt-8"
+            className="flex flex-col md:hidden items-center gap-y-4"
         >
             <FlowNode 
                 icon={Wifi}
                 title="Data Ingestion"
                 description="Secures all incoming data streams, in-transit, from any source."
             />
-            <ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" />
+            <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
             <FlowNode 
                 icon={BrainCircuit}
                 title="AI Threat Analysis"
                 description="Real-time DLP analysis and threat classification without decryption."
             />
-            <ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" />
+            <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
             <FlowNode 
                 icon={Lock}
                 title="Hybrid PQC Engine"
                 description="Applies a robust combination of classical and quantum-resistant encryption."
             />
-            <ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" />
+            <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
              <FlowNode 
                 icon={Database}
                 title="Data At-Rest"
                 description="Ensures long-term security for data in storage and archives."
             />
-            <ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" />
+            <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
              <FlowNode 
                 icon={File}
                 title="Data In-Use"
                 description="Protects data while being actively processed in memory."
             />
-            <ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" />
+            <motion.div variants={itemVariants}><ArrowRight className="h-10 w-10 text-primary/50 rotate-90 my-4" /></motion.div>
              <FlowNode 
                 icon={ShieldCheck}
                 title="Secured Asset"
