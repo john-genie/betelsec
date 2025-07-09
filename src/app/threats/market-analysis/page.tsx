@@ -1,10 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Cpu, FileText, BarChart3 } from 'lucide-react';
-import { InteractiveCard } from '@/components/interactive-card';
+import { PrismBlueprintInfographic } from '@/components/prism-blueprint-infographic';
 
 export default function ProductAnalysisPage() {
   return (
@@ -21,22 +20,24 @@ export default function ProductAnalysisPage() {
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto max-w-4xl space-y-24">
+        <div className="container mx-auto max-w-5xl space-y-24">
           
           {/* BetelSec Product Blueprint */}
-          <div className="space-y-6 text-lg text-muted-foreground">
+          <div className="space-y-8">
              <div className="flex items-center gap-4">
                 <Cpu className="h-10 w-10 text-primary" />
                 <h2 className="text-4xl font-bold tracking-tight text-foreground">
                   PRISM Product Blueprint
                 </h2>
             </div>
-            <p>
-              The Post-quantum Resilient Intelligent Security Mainframe (PRISM) is engineered as an integrated, multi-layered defense system designed to provide comprehensive post-quantum security. The blueprint is based on three strategic pillars: anticipating threats, neutralizing attacks, and fortifying digital assets.
-            </p>
-            <p>
-              PRISM acts as the central intelligence core for an organization's security posture. It secures data across all states—in-transit, at-rest, and in-use—by applying robust PQC and AI-driven policies. This creates a cohesive architecture that is both resilient and crypto-agile, allowing for seamless adaptation to the evolving security landscape.
-            </p>
+            <div className="text-lg text-muted-foreground">
+                <p>
+                The Post-quantum Resilient Intelligent Security Mainframe (PRISM) is engineered as an integrated, multi-layered defense system designed to provide comprehensive post-quantum security. The blueprint below illustrates its core architecture, from data ingestion to final, quantum-proof protection.
+                </p>
+            </div>
+            <div className="mt-8">
+                <PrismBlueprintInfographic />
+            </div>
           </div>
 
           {/* Market Analysis */}
