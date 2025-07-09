@@ -3,87 +3,93 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Cpu, FileText, BarChart3 } from 'lucide-react';
+import { InteractiveCard } from '@/components/interactive-card';
 
-export default function MarketAnalysisPage() {
+export default function ProductAnalysisPage() {
   return (
     <div className="bg-background">
       <section className="pt-32 pb-16">
         <header className="container text-center">
           <h1 className="text-5xl font-bold tracking-tighter md:text-7xl">
-            Cybersecurity Market Analysis
+            Product Analysis
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
-            An overview of the escalating landscape of digital threats and their
-            economic impact on key global sectors.
+            An overview of the BetelSec product blueprint, market landscape, and patentable innovations.
           </p>
         </header>
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto max-w-4xl space-y-16">
+        <div className="container mx-auto max-w-4xl space-y-24">
+          
+          {/* BetelSec Product Blueprint */}
           <div className="space-y-6 text-lg text-muted-foreground">
-            <h2 className="text-4xl font-bold tracking-tight text-foreground">
-              The Trillion-Dollar Problem
-            </h2>
+             <div className="flex items-center gap-4">
+                <Cpu className="h-10 w-10 text-primary" />
+                <h2 className="text-4xl font-bold tracking-tight text-foreground">
+                  BetelSec Product Blueprint
+                </h2>
+            </div>
             <p>
-              Cybercrime is projected to cost the world trillions of dollars
-              annually, a figure that surpasses the GDP of most nations. This
-              is not merely a technological issue; it is a profound economic
-              and national security crisis. Ransomware attacks, in particular,
-              have evolved from nuisance-level threats to catastrophic events
-              capable of paralyzing entire industries, from healthcare to
-              critical infrastructure.
+              Our product suite is engineered as an integrated, multi-layered defense system designed to provide comprehensive post-quantum security. The blueprint is based on three strategic pillars: anticipating threats, neutralizing attacks, and fortifying digital assets. Each product—PRISM, SYNAPSE, DSG, and QRC-84—addresses a critical vulnerability in the data lifecycle.
             </p>
             <p>
-              Recent high-profile attacks have demonstrated the fragility of
-              our interconnected systems, where a single breach can cause
-              billions in damages and disrupt supply chains globally.
+              PRISM acts as the central intelligence core, SYNAPSE secures data in motion, DSG protects data at rest, and QRC-84 enables untraceable communication. Together, they form a cohesive architecture that is both resilient and crypto-agile, allowing for seamless adaptation to the evolving security landscape.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-             <div>
-                <Image
-                    src="https://placehold.co/600x400.png"
-                    alt="Cyber attack analysis"
-                    width={600}
-                    height={400}
-                    className="rounded-lg"
-                    data-ai-hint="cyber security"
-                />
+          {/* Market Analysis */}
+           <div className="space-y-6 text-lg text-muted-foreground">
+            <div className="flex items-center gap-4">
+                <BarChart3 className="h-10 w-10 text-primary" />
+                <h2 className="text-4xl font-bold tracking-tight text-foreground">
+                  Market Analysis
+                </h2>
             </div>
-            <div className="space-y-6 text-lg text-muted-foreground">
-                <h3 className="text-2xl font-semibold tracking-tight text-foreground">
-                  The Ransomware Epidemic
-                </h3>
-                <p>
-                  Groups like ALPHV/BlackCat, BlackSuit, and Qilin have
-                  professionalized cyber extortion, operating with a level of
-                  sophistication once reserved for state actors. Their tactics
-                  have shifted from simple data encryption to a multi-pronged
-                  approach involving data exfiltration, public shaming, and
-                  direct threats to patients and customers.
-                </p>
-                <Button asChild variant="link" className="px-0 text-lg">
-                    <Link href="/blog">
-                        Read recent case studies <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                </Button>
-            </div>
+            <p>
+              The cybersecurity market is grappling with a paradigm shift. The rise of sophisticated ransomware and the looming threat of quantum computing have rendered many traditional security solutions inadequate. The global cost of cybercrime is projected to exceed $10 trillion annually, creating an urgent and expanding market for next-generation security.
+            </p>
+             <p>
+              Key sectors such as finance, healthcare, defense, and critical infrastructure are now mandated by emerging regulations to adopt quantum-resistant technologies. This creates a significant first-mover advantage for companies like BetelSec that offer a comprehensive and readily deployable PQC solution.
+            </p>
           </div>
+
+
+          {/* Patentable Components */}
+           <div className="space-y-6 text-lg text-muted-foreground">
+            <div className="flex items-center gap-4">
+                <FileText className="h-10 w-10 text-primary" />
+                <h2 className="text-4xl font-bold tracking-tight text-foreground">
+                  Patentable Components
+                </h2>
+            </div>
+            <p>
+              BetelSec's innovation is anchored in several patentable technologies that create a strong competitive moat. These include:
+            </p>
+            <ul className="list-disc list-inside space-y-4">
+                <li>
+                    <strong>AI-Powered Threat Classification Engine (PRISM):</strong> A proprietary machine learning model that analyzes encrypted traffic patterns to identify and mitigate threats without decryption, specializing in DLP for the quantum era.
+                </li>
+                 <li>
+                    <strong>Dynamic Crypto-Agility Framework:</strong> A system that allows for the seamless and automated rotation of cryptographic algorithms across the entire product suite, ensuring long-term resilience against future vulnerabilities.
+                </li>
+                 <li>
+                    <strong>Anonymous Key-Sharing Protocol (QRC-84):</strong> A novel method for establishing secure communication channels using PQC KEMs that eliminates the need for persistent identifiers, leaving no metadata trail.
+                </li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
       <section className="py-24">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tighter">
-            Anticipating the Next Wave
+            Secure Your Competitive Edge
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            The current landscape is merely a prelude to the quantum era. Our
-            strategic approach is designed to counter these existing threats
-            while building resilience for the future.
+            Our innovative approach provides a strategic advantage in the quantum era. Engage with us to learn how BetelSec can fortify your organization.
           </p>
           <div>
             <Button asChild size="lg" className="mt-8">
