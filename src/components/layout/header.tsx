@@ -37,6 +37,7 @@ const productLinks = [
 
 const threatLinks = [
     { name: 'Harvest Now, Decrypt Later', href: '/threats/harvest-now-decrypt-later' },
+    { name: 'Market Analysis', href: '/threats/market-analysis' },
 ]
 
 export function Header() {
